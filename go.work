@@ -1,0 +1,3 @@
+go 1.21.6
+
+use ./Starting_Steps_Basics/hello_world
