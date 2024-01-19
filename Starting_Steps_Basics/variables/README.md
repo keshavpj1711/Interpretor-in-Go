@@ -1,3 +1,5 @@
+# Variables
+
 ## Basic variables
 ```go
 bool
@@ -15,4 +17,15 @@ rune // alias for int32
 float32 float64
 
 complex64 complex128
+```
+
+## Short Variable Declaration
+
+```go
+// Normal variable declaration
+var anotherStr string = "Another random piece of sh**"
+
+// short variable declaration
+randomString := "This is a random string value"
+
 ```
