@@ -46,7 +46,7 @@ Go code generally runs faster than interpreted languages and compiles faster tha
 - One of the most convenient things about using a compiled language like Go for Textio is that when we deploy our server we don't need to include any runtime language dependencies like Node or a Python interpreter. 
 - Therefore we just add the pre-compiled binary to the server and start it up!
 
-## GO is strongly typed
+## GO is static and strongly typed
 
 - Go enforces strong and static typing, meaning variables can only have a single type. A **string** variable like` "hello world"` can't be changed to an **int**, such as the number 3.
 - Contrast this with most interpreted languages, where the variable types are dynamic. Dynamic typing can lead to subtle bugs that are hard to detect.
@@ -57,3 +57,7 @@ Go code generally runs faster than interpreted languages and compiles faster tha
 Go programs are fairly lightweight
 - Each program includes a small amount of "extra" code that's included in the executable binary. This extra code is called the Go Runtime. 
 - One of the purposes of the Go runtime is to cleanup unused memory at runtime.
+
+Here's an image comparing idle servers memory comparision\
+
+![Memory Comparision](../images/memory%20use.png)
