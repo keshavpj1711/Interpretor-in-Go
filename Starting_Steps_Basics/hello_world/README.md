@@ -28,3 +28,24 @@ To work with different modules we use directives like `use`, `replace` and `excl
 ### Location
 
 `go.work` resides in the root directory of your workspace
+
+# Learning the Basics
+Lets go line by line
+
+- `package main`: This means that this code can be run stand alone 
+- `main()`: This is the starting point of our code
+
+Go code generally runs faster than interpreted languages and compiles faster than other compiled languages like C and Rust, however go code runs slower than compiled C and Rust counterparts.\
+
+## Compiled vs Interpreted
+
+![How Compiled code differs from the interpreted ones](../images/compiled_vs_interpreted.jpg)
+
+- In case of interpreted code when distributing your final proj you need to distribute your src code but in case of compiled code after building you get a machine executable code.
+- Compiled programs can be run without access to the original source code, and without access to a compiler.
+- One of the most convenient things about using a compiled language like Go for Textio is that when we deploy our server we don't need to include any runtime language dependencies like Node or a Python interpreter. 
+- Therefore we just add the pre-compiled binary to the server and start it up!
+
+## GO is strongly typed
+
+- 
