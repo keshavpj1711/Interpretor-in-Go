@@ -35,7 +35,7 @@ Lets go line by line
 - `package main`: This means that this code can be run stand alone 
 - `main()`: This is the starting point of our code
 
-Go code generally runs faster than interpreted languages and compiles faster than other compiled languages like C and Rust, however go code runs slower than compiled C and Rust counterparts.\
+Go code generally runs faster than interpreted languages and compiles faster than other compiled languages like C and Rust, however go code runs slower than compiled C and Rust counterparts.
 
 ## Compiled vs Interpreted
 
@@ -51,3 +51,9 @@ Go code generally runs faster than interpreted languages and compiles faster tha
 - Go enforces strong and static typing, meaning variables can only have a single type. A **string** variable like` "hello world"` can't be changed to an **int**, such as the number 3.
 - Contrast this with most interpreted languages, where the variable types are dynamic. Dynamic typing can lead to subtle bugs that are hard to detect.
 - Two strings can be concatenated with the + operator. Because Go is strongly typed, it won't allow you to concatenate a string variable with a numeric variable.
+
+## How GO handles memory?
+
+Go programs are fairly lightweight
+- Each program includes a small amount of "extra" code that's included in the executable binary. This extra code is called the Go Runtime. 
+- One of the purposes of the Go runtime is to cleanup unused memory at runtime.
