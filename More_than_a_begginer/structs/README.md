@@ -11,5 +11,9 @@ type car struct {
 Structs has a similar usecase to dictionaries.\
 Now as we already know how to define a struct lets actually use this created variable:
 ```go
-
+var myCar car
+myCar.Make = //Enter your value
+myCar.Model = //Enter your value 
+myCar.Height = //Enter your value
+myCar.Width = //Enter your value
 ```
