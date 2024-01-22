@@ -17,3 +17,25 @@ myCar.Model = //Enter your value
 myCar.Height = //Enter your value
 myCar.Width = //Enter your value
 ```
+
+# Nested Structs
+```go
+type car struct {
+  Make string
+  Model string
+  Height int
+  Width int
+  FrontWheel Wheel
+  BackWheel Wheel
+}
+
+type Wheel struct {
+  Radius int
+  Material string
+}
+```
+How to use these vars:
+```go
+myCar := car{}
+myCar.FrontWheel.Radius = 5
+```
