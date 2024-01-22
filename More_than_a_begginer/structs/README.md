@@ -39,3 +39,29 @@ How to use these vars:
 myCar := car{}
 myCar.FrontWheel.Radius = 5
 ```
+
+# Anonymous Structs
+An anonymous struct is just like a normal struct, but it is defined without a name and therefore cannot be referenced elsewhere in the code.
+```go
+myCar := struct {
+  Make string
+  Model string
+} {
+  Make: "tesla",
+  Model: "model 3",
+}
+```
+You can even nest anonymous structs:
+```go
+type car struct {
+  Make string
+  Model string
+  Height int
+  Width int
+  // Wheel is a field containing an anonymous struct
+  Wheel struct {
+    Radius int
+    Material string
+  }
+}
+```
