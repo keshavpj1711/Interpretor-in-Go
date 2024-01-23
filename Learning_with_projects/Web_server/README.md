@@ -20,3 +20,12 @@ control over output layout
     ```
 
 ## `log`
+`log` is for logging messages, useful for debugging, tracking events, and error reporting.
+
+Functions that we will be working with includes:
+- `log.Println()`: for logging messages to the standard logger, which usually prints to the console.
+- `log.Printf()`: similar to printf just used for additional logging metadata
+- `log.Fatal()`: for logging a message and exiting the program immediately.
+- `log.Panic()`: for logging a message and triggering a panic, intended for fatal errors.
+
+## `net/http`
