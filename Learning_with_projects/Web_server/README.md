@@ -29,3 +29,4 @@ Functions that we will be working with includes:
 - `log.Panic()`: for logging a message and triggering a panic, intended for fatal errors.
 
 ## `net/http`
+Contains functions and types for creating and handling HTTP requests and responses. This will be the most useful package when creating our web server. We will learn about this package as we move along
