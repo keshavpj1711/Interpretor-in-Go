@@ -50,4 +50,6 @@ func main(){
 		log.Fatal(err)
 	}
 
+	// The problem i am currently facing is everytime i check for open ports, 
+	// once i try to connect to it shows this invalid port or service name in host:port pair (SA1020)
 }
