@@ -36,6 +36,59 @@ func comparingDates(date1 Date, date2 Date) string{
 	}
 }
 
+// Checking if the year is leap or not
+func isLeap(year int) bool{
+	if year % 4 == 0{
+		if year % 100 == 0{
+			if year % 400 == 0{
+				return true
+			}else{
+				return false
+			}
+		}else{
+			return true
+		}
+	}else{
+		return false
+	}
+}
+
+// Checking for validity of day and month
+func validDayMonth(date Date) bool{
+
+	// Checking for valid month
+	if date.month > 12{
+		fmt.Println("Please enter a valid month for date 1")
+		return false
+	}
+
+	// Checking for valid day 
+	if date.month == 1 || date.month == 3 || date.month == 5 || date.month == 7 || date.month == 8 || date.month == 10 || date.month == 12{
+		if date.day > 31{
+			fmt.Println("Please enter a valid day")
+			return false
+		}
+	}else if date.month == 4 || date.month == 6|| date.month == 9 || date.month == 11{
+		if date.day > 30{
+			fmt.Println("Please enter a valid day")
+			return false
+		}
+	}else if isLeap(date.year){
+		if date.day > 29{
+			fmt.Println("Please enter a valid day")
+			return false
+		}
+	}else{
+		if date.day > 28{
+			fmt.Println("Please enter a valid day")
+			return false
+		}
+	}
+
+	// If all conditions satisfied 
+	return true
+}
+
 func main(){
 	var date1, date2 Date
 
@@ -45,6 +98,8 @@ func main(){
 
 	fmt.Printf("Enter date 2 in the format DD/MM/YYYY: ")
 	fmt.Scanf("%d/%d/%d\n", &date2.day, &date2.month, &date2.year)
+
+
 
 	// Calling the compare Date Function
 	result := comparingDates(date1, date2)
