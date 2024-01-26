@@ -41,13 +41,10 @@ func main(){
 
 	// Taking input of two dates
 	fmt.Printf("Enter date 1 in the format DD/MM/YYYY: ")
-	fmt.Scanf("%d/%d/%d", &date1.day, &date1.month, &date1.year)
-
-	fmt.Println()  // Added newline
+	fmt.Scanf("%d/%d/%d\n", &date1.day, &date1.month, &date1.year)
 
 	fmt.Printf("Enter date 2 in the format DD/MM/YYYY: ")
-	fmt.Scanf("%d/%d/%d", &date2.day, &date2.month, &date2.year)
-
+	fmt.Scanf("%d/%d/%d\n", &date2.day, &date2.month, &date2.year)
 
 	// Calling the compare Date Function
 	result := comparingDates(date1, date2)
