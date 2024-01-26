@@ -63,11 +63,9 @@ func validDayMonth(date Date) bool{
 	}
 
 	// Checking for valid day 
-	if date.month == 1 || date.month == 3 || date.month == 5 || date.month == 7 || date.month == 8 || date.month == 10 || date.month == 12{
-		if date.day > 31{
-			fmt.Println("Please enter a valid day")
-			return false
-		}
+	if date.day > 31{
+		fmt.Println("Please enter a valid day")
+		return false
 	}else if date.month == 4 || date.month == 6|| date.month == 9 || date.month == 11{
 		if date.day > 30{
 			fmt.Println("Please enter a valid day")
@@ -92,15 +90,27 @@ func validDayMonth(date Date) bool{
 func main(){
 	var date1, date2 Date
 
-	// Taking input of two dates
-	fmt.Printf("Enter date 1 in the format DD/MM/YYYY: ")
-	fmt.Scanf("%d/%d/%d\n", &date1.day, &date1.month, &date1.year)
+	for {
+		// Taking input of two dates
+		fmt.Printf("Enter date 1 in the format DD/MM/YYYY: ")
+		fmt.Scanf("%d/%d/%d\n", &date1.day, &date1.month, &date1.year)
 
-	fmt.Printf("Enter date 2 in the format DD/MM/YYYY: ")
-	fmt.Scanf("%d/%d/%d\n", &date2.day, &date2.month, &date2.year)
+		if validDayMonth(date1){
+			
+		}else{
+			continue
+		}
 
+		fmt.Printf("Enter date 2 in the format DD/MM/YYYY: ")
+		fmt.Scanf("%d/%d/%d\n", &date2.day, &date2.month, &date2.year)
 
-
+		if validDayMonth(date2){
+			break
+		}else{
+			continue
+		}
+	}
+	
 	// Calling the compare Date Function
 	result := comparingDates(date1, date2)
 	fmt.Println(result)
