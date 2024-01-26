@@ -91,25 +91,28 @@ func main(){
 	var date1, date2 Date
 
 	for {
-		// Taking input of two dates
-		fmt.Printf("Enter date 1 in the format DD/MM/YYYY: ")
-		fmt.Scanf("%d/%d/%d\n", &date1.day, &date1.month, &date1.year)
+        // Taking input of date1
+        fmt.Printf("Enter date 1 in the format DD/MM/YYYY: ")
+        fmt.Scanf("%d/%d/%d\n", &date1.day, &date1.month, &date1.year)
 
-		if validDayMonth(date1){
-			
-		}else{
-			continue
-		}
+        if validDayMonth(date1) {
+            break // Exit the loop if date1 is valid
+        } else {
+            continue // Keep prompting for date1 if invalid
+        }
+    }
 
-		fmt.Printf("Enter date 2 in the format DD/MM/YYYY: ")
-		fmt.Scanf("%d/%d/%d\n", &date2.day, &date2.month, &date2.year)
+    // Get valid date2, preserving date1
+    for {
+        fmt.Printf("Enter date 2 in the format DD/MM/YYYY: ")
+        fmt.Scanf("%d/%d/%d\n", &date2.day, &date2.month, &date2.year)
 
-		if validDayMonth(date2){
-			break
-		}else{
-			continue
-		}
-	}
+        if validDayMonth(date2) {
+            break // Exit the loop if date2 is valid
+        } else {
+            continue // Keep prompting for date2 only
+        }
+    }
 	
 	// Calling the compare Date Function
 	result := comparingDates(date1, date2)
