@@ -29,7 +29,7 @@ mySlice := primes[1:4]
 
 # Taking input as arrays
 
-Using `fmt.Scanf` for fixed array size: Input is taken using loops
+## Using `fmt.Scanf` for fixed array size: Input is taken using loops
 
 ```go
 var numbers [5]int
@@ -49,3 +49,24 @@ Slices to Rescue:
 - Don't own their memory, and reference a section of an underlying array. 
 - While it may seem like you're creating slices independently, they always have an underlying array, even if you don't explicitly declare one.
 - Can grow or shrink as needed using the **append** function.
+
+## Using `fmt.Scanf()` for variable length array - slices
+
+```go
+var numbers []int
+
+for {
+    var num int
+    fmt.Print("Enter a number (or 0 to stop): ")
+    fmt.Scanf("%d", &num)
+
+    if num == 0 {
+        break
+    }
+
+    numbers = append(numbers, num) // Append to the slice
+}
+
+fmt.Println("You entered:", numbers) // Checking your input
+```
+
