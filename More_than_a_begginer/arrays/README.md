@@ -26,3 +26,26 @@ mySlice := primes[1:4]
 // arrayname[:highIndex]
 // arrayname[:]
 ```
+
+# Taking input as arrays
+
+Using `fmt.Scanf` for fixed array size: Input is taken using loops
+
+```go
+var numbers [5]int
+
+fmt.Println("Enter 5 numbers:")
+
+for i := 0; i < 5; i++ {
+    fmt.Scanf("%d", &numbers[i]) // Read each element into the array
+}
+
+fmt.Println("You entered:", numbers)
+```
+
+In GO we can't create arrays of variable length due to reasons like memory efficiency and type safety.\
+But in GO we have slices as a very powerful tool.\
+Slices to Rescue:
+- Don't own their memory, and reference a section of an underlying array. 
+- While it may seem like you're creating slices independently, they always have an underlying array, even if you don't explicitly declare one.
+- Can grow or shrink as needed using the **append** function.
