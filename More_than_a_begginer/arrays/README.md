@@ -19,4 +19,10 @@ Syntax for using a sliced array:
 primes := [6]int{2, 3, 5, 7, 11, 13}
 mySlice := primes[1:4]
 // mySlice = {3, 5, 7}
+
+// The Syntax
+// arrayname[lowIndex:highIndex]
+// arrayname[lowIndex:]
+// arrayname[:highIndex]
+// arrayname[:]
 ```
