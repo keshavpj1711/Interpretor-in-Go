@@ -5,15 +5,21 @@ import "fmt"
 // Creating a function to do our requiored task
 func twoSum(nums []int, target int) []int {
 	var output []int
+	var trySum int
 
 	for i := 0; i < len(nums); i++{
 		for j := i; j < len(nums); j++{
 			if nums[i] + nums[j] == target{
 				output = append(output, i, j)
+				trySum++
 			}
+			if trySum == 1 {
+				return output
 		}
 	}
-
+	
+	}
+	
 	return output
 }
 
@@ -38,7 +44,7 @@ func main(){
 		input_array = append(input_array, num)
 	}
 
-	fmt.Println(input_array) // Printing the input array 
+	fmt.Printf("Input array: %v\n",input_array) // Printing the input array 
 
 	// Taking input for the target sum
 	var targetSum int
