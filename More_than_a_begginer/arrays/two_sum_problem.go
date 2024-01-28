@@ -37,4 +37,18 @@ func main(){
 		// Appending the input 
 		input_array = append(input_array, num)
 	}
+
+	fmt.Println(input_array) // Printing the input array 
+
+	// Taking input for the target sum
+	var targetSum int
+	fmt.Printf("Enter the target sum: ")
+	fmt.Scanf("%d\n", &targetSum)
+
+
+	// Calling function to do the main computation 
+	output := twoSum(input_array, targetSum)
+
+	// Printing the output
+	fmt.Printf("Output index required: %v", output)
 }
