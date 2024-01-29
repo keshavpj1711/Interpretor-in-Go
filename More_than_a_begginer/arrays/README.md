@@ -70,3 +70,8 @@ for {
 fmt.Println("You entered:", numbers) // Checking your input
 ```
 
+# What is len and cap?
+
+The length of a slice may be changed as long as it still fits within the limits of the underlying array; just assign it to a slice of itself.\
+The capacity of a slice, accessible by the built-in function `cap()`, reports the maximum length the slice may assume.\
+
