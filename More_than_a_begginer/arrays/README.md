@@ -91,3 +91,25 @@ func Append(slice, data []byte) []byte {
     return slice
 }
 ```
+
+# Variadic
+
+Many functions, especially those in the standard library, can take an arbitrary number of final arguments. This is accomplished by using the "..." syntax in the function signature.
+
+A variadic function receives the variadic arguments as a slice.
+```go
+func concat(strs ...string) string {
+    final := ""
+    // strs is just a slice of strings
+    for _, str := range strs {
+        final += str
+    }
+    return final
+}
+
+func main() {
+    final := concat("Hello ", "there ", "friend!")
+    fmt.Println(final)
+    // Output: Hello there friend!
+}
+```
